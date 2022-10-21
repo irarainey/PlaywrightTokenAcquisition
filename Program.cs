@@ -85,10 +85,9 @@ namespace PlaywrightTokenAcquisition
             AuthenticationResult result = await app.AcquireTokenByAuthorizationCode(new string[] { scope }, authCode)
                 .ExecuteAsync();
 
-            // Get the access token from the response
-            var access_token = result.AccessToken;
+            // Display the access token from the response
             Console.WriteLine("Access token retrieved:\n");
-            Console.WriteLine(access_token);
+            Console.WriteLine(result.AccessToken);
             Console.WriteLine();
 
             // All done
