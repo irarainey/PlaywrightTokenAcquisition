@@ -20,8 +20,13 @@ namespace PlaywrightTokenAcquisition
             // Get client app related related settings
             string tenant_id = config.GetValue<string>("tenant_id");
             string client_id = config.GetValue<string>("client_id");
-            string redirect_uri = config.GetValue<string>("redirect_uri");
             string scope = config.GetValue<string>("scope");
+
+            // The redirect uri being used here could be any service that you can use to access the auth code
+            // after it has been redirected from Azure Active Directory.
+            // This is using https://oidcdebugger.com which of course determines how you extract the auth code
+            // from page at the step lower down to use to exchange for an access token
+            string redirect_uri = "https://oidcdebugger.com/debug";
 
             // Define authority and login uri
             string authority = $"https://login.microsoftonline.com/{tenant_id}";
