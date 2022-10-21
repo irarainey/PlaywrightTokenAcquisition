@@ -13,8 +13,8 @@ namespace PlaywrightTokenAcquisition
             // Setup configuration builder
             IConfiguration config = new ConfigurationBuilder()
                 .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-                .AddUserSecrets<Program>()
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddUserSecrets<Program>()
                 .Build();
 
             // Get client app related related settings
