@@ -10,7 +10,7 @@ Then create an App Registration in Azure Active Directory setting the redirect u
 
 Once you have the user and App Registration setup, you should grant consent for scope required for the test automation user for the client application. You can do that via the App Registration blade in the portal, or by manually requesting it by crafting a login uri. This code sample assumes consent is already granted.
 
-If using Visual Studio, right-click on the project in Solution Explorer and select Manage User Secrets. Copy the contents of the `appsettings.json` file and complete the values as per the values created above. Before running, remove the contents of the `appsettings.json` file.
+If using Visual Studio, right-click on the project in Solution Explorer and select Manage User Secrets. Copy the contents of the `appsettings.json` file and complete the values as per the values created above.
 
 Before running you will need to install the Playwright browser dependencies. You can do this by first building the project and then running the PowerShell script copied into the project `bin` folder: `pwsh bin/Debug/netX/playwright.ps1 install`.
 
