@@ -36,7 +36,7 @@ namespace PlaywrightTokenAcquisition
             Console.WriteLine("Creating Playwright instance");
             using var playwright = await Playwright.CreateAsync();
 
-            // Launch and instance of Chrome
+            // Launch an instance of Chrome
             Console.WriteLine("Launching Chrome");
             await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions()
             {
