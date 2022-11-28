@@ -81,7 +81,7 @@ namespace PlaywrightTokenAcquisition
                 .Build();
 
             // Get access token with code exchange
-            Console.WriteLine("Request access token");
+            Console.WriteLine("Request access token with MSAL");
             AuthenticationResult result = await app.AcquireTokenByAuthorizationCode(new string[] { scope }, authCode)
                 .ExecuteAsync();
 
